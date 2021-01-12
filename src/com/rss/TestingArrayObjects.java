@@ -43,6 +43,14 @@ public class TestingArrayObjects {
     }
 
     public User getUserByName(String nameUser, ArrayList<User> userListArray){
+        if (userListArray != null){
+            for (User u : userListArray){
+                if (u.getName().equalsIgnoreCase(nameUser)){
+                    return u;
+                }
+            }
+            return null;
+        }
         return null;
     }
 
